@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeroeComponent } from './components/heroe/heroe.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,14 @@ const routes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent
+  },
+  {
+    path: 'heroe/:id',
+    component: HeroeComponent
+  },
+  {
+    path: 'buscar/:termino',
+    component: BuscadorComponent
   },
   {
     path: '404',

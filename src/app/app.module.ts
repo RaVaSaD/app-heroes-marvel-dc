@@ -12,10 +12,11 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 // Servicios
 import { HeroesService } from './services/heroes.service';
-
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { HeroesService } from './services/heroes.service';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeroeComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

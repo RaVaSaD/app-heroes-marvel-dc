@@ -70,9 +70,29 @@ export class HeroesService {
     return this.heroes;
   }
 
+  public getHeroe(idx: number): Heroe {
+    return this.heroes[idx];
+  }
+
+  public buscarHeroes( termino: string ): Heroe[] {
+    let heroesArr: Heroe[] = [];
+    termino = termino.toLowerCase();
+
+    for ( let heroe of this.heroes ){
+
+      let nombre = heroe.nombre.toLowerCase();
+      // El indexOf permite buscar un string dentro del nombre, y devuleve 0 o superior si lo ha encontrado o -1, si no lo ha encontrado.
+      if ( nombre.indexOf(termino) >= 0 ) {
+        heroesArr.push(heroe);
+      }
+    }
+
+    return heroesArr;
+  }
+
 }
 
-export interface Heroe{
+export interface Heroe {
   nombre: string;
   bio: string;
   img: string;
